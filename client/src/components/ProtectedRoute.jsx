@@ -2,7 +2,7 @@ import { message } from "antd";
 import React, { useEffect, useState } from "react";
 import { getUserInfo } from "../apicalls/users";
 import { useDispatch, useSelector } from "react-redux";
-import { SetUser } from "../redux/usersSlice.js";
+import { SetUser } from "../redux/usersSlice.jsx";
 import { useNavigate } from "react-router-dom";
 import { HideLoading, ShowLoading } from "../redux/loaderSlice";
 

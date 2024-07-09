@@ -29,7 +29,12 @@ function Home() {
   useEffect(() => {
     getExams();
   }, []);
-
+  const formatDuration = (totalSeconds) => {
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+    return `${hours}h ${minutes}m ${seconds}s`;
+  };
   return (
     user && (
       <div>
@@ -45,7 +50,9 @@ function Home() {
 
                 <h1 className="text-md">Total Marks : {exam.totalMarks}</h1>
                 <h1 className="text-md">Passing Marks : {exam.passingMarks}</h1>
-                <h1 className="text-md">Duration : {exam.duration}</h1>
+                <h1 className="text-md">
+                  Duration in (hr:min:sec) : {exam.duration}
+                </h1>
 
                 <button
                   className="primary-outlined-btn"

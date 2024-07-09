@@ -160,7 +160,7 @@ function AddEditExam() {
                 </Col>
                 <Col span={8}>
                   <Form.Item label="Exam Duration" name="duration">
-                    <input type="number" />
+                    <input type="text" placeholder="hr:min:sec" />
                   </Form.Item>
                 </Col>
                 <Col span={8}>

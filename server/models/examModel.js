@@ -7,7 +7,7 @@ const examSchema = new mongoose.Schema(
       required: true,
     },
     duration: {
-      type: Number,
+      type: String,
       required: true,
     },
     category: {
@@ -30,7 +30,7 @@ const examSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-  }
+  },
 );
 
 const Exam = mongoose.model("exams", examSchema);

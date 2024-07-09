@@ -83,17 +83,23 @@ function WriteExam() {
     }
   };
 
+  function timeStringToSeconds(duration) {
+    const [hours, minutes, seconds] = duration.split(":").map(Number);
+    return hours * 3600 + minutes * 60 + seconds;
+  }
+
   const startTimer = () => {
-    let totalSeconds = examData.duration;
+    let totalSeconds = timeStringToSeconds(examData.duration); // Convert time string to total seconds
     const intervalId = setInterval(() => {
       if (totalSeconds > 0) {
         totalSeconds = totalSeconds - 1;
         setSecondsLeft(totalSeconds);
       } else {
         setTimeUp(true);
+        clearInterval(intervalId); // Clear the interval when time is up
       }
     }, 1000);
-    setIntervalId(intervalId);
+    setIntervalId(intervalId); // Store the interval ID for cleanup later if needed
   };
 
   useEffect(() => {
@@ -160,7 +166,7 @@ function WriteExam() {
                       </h1>
                     </div>
                   );
-                }
+                },
               )}
             </div>
 
