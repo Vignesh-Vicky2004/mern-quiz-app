@@ -1,10 +1,7 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGO_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  ssl: true, // Add this line if you're using MongoDB Atlas
-});
+mongoose.connect(process.env.MONGO_URL);
+
 const connection = mongoose.connection;
 
 connection.on("connected", () => {
