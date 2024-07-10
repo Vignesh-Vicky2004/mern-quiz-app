@@ -7,6 +7,8 @@ const dbConfig = require("./config/dbConfig");
 const usersRoute = require("./routes/usersRoute");
 const examsRoute = require("./routes/examsRoute");
 const resportsRoute = require("./routes/reportsRoute");
+const cors = require("cors");
+app.use(cors());
 
 app.use("/api/users", usersRoute);
 app.use("/api/exams", examsRoute);
@@ -17,9 +19,9 @@ const path = require("path");
 __dirname = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "client", "build")));
+  app.use(express.static(path.join(__dirname, "client", "public")));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "client", "public", "index.html"));
   });
 }
 
