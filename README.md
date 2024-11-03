@@ -25,12 +25,9 @@ Here are some screenshots of the application:
 
 ![Quiz Result](https://github.com/user-attachments/assets/7b373733-4f1b-4a00-b95e-dada74243bed)
 ![Question Management](https://github.com/user-attachments/assets/29cd1af1-9d07-44cd-8618-3976df5ed926)
-![Admin Portal](https://github.com/user-attachments/assets/d1b701a7-159a-4d12-869a-0a84a206c23a)
-![User Quiz Attempt](https://github.com/user-attachments/assets/cd2392de-4524-41fc-8da5-e10bf89b3fba)
 ![Dashboard](https://github.com/user-attachments/assets/ff9249d9-5317-4116-a6f6-339b592ad742)
 ![Final Review](https://github.com/user-attachments/assets/a3717800-3ff8-47ec-98d3-ab33edd0c862)
 ![User Interface](https://github.com/user-attachments/assets/eb8df382-a0e4-46a6-8b31-e3ce9554ad18)
-![Feedback Section](https://github.com/user-attachments/assets/f1fa28f2-4e79-440e-b746-5bf8057ca2d5)
 ![User Reports](https://github.com/user-attachments/assets/44a054ed-6605-46d1-9f7c-b28cb485e1d2)
 
 ## Installation
