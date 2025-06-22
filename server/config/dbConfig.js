@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
+require("dotenv").config(); // Load .env variables (only needed for local dev)
 
-// ✅ Hardcoded MongoDB URI
-const MONGO_URL = "mongodb+srv://vignesh:V8uzVIc4uV5F5TA9@cluster0.xnkcutc.mongodb.net/quiz?retryWrites=true&w=majority";
+const MONGO_URL = process.env.MONGO_URL;
 
 mongoose.connect(MONGO_URL, {
   useNewUrlParser: true,
