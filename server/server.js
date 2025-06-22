@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
-const path = require("path");
 const cors = require("cors");
+const path = require("path");
 
 app.use(cors());
 app.use(express.json());
 
-// MongoDB config
+// DB config
 const dbConfig = require("./config/dbConfig");
 
 // Routes
@@ -19,7 +19,7 @@ app.use("/api/users", usersRoute);
 app.use("/api/exams", examsRoute);
 app.use("/api/reports", reportsRoute);
 
-// Serve React frontend in production
+// Serve frontend from client/build
 const __dirname1 = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
@@ -30,13 +30,7 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-// Default test route
-app.get("/", (req, res) => {
-  res.send("🟢 Backend is running");
-});
-
-const port = process.env.PORT || 5000;
-
+const port = process.env.PORT || 10000;
 app.listen(port, () => {
   console.log(`🚀 Server listening on port ${port}`);
 });
